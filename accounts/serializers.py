@@ -7,7 +7,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = UserProfile
-        fields = ('anonymity', 'photo')
+        fields = ('anonymity', 'gender', 'photo')
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
