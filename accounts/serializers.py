@@ -12,7 +12,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     profile = UserProfileSerializer(required=True)
-    evaluations = serializers.PrimaryKeyRelatedField(many=True, queryset=Evaluation.objects.all())
+    evaluations = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = User
